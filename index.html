@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+
+    <div>
+        <h1 data-testid="slackUserName">Oluebube Emerem</h1>
+        <img src="/profilePicture.jpg" alt="Oluebube Emerem" data-testid="slackDisplayImage">
+        <h1 data-testid="currentDayOfTheWeek" id="currentDayOfTheWeek"></h1>
+        <h1 data-testid="currentUTCTime" id="currentUTCTime"></h1>
+        <h1 data-testid="myTrack">My Track: Frontend</h1>
+        <a href="https://www.google.com" data-testid="githubURL">My Github URL</a>
+    </div>
+    
+</body>
+<script>
+
+    const d = new Date();
+    let day = d.getDay();
+    document.getElementById("currentDayOfTheWeek").innerHTML = day;
+
+    const date = new Date();
+    const utcStr = date.toUTCString();
+    document.getElementById("currentUTCTime").innerHTML = utcStr;
+
+</script>
+</html>
